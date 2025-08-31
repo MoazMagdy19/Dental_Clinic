@@ -35,14 +35,14 @@ const serviceSelect = document.getElementById("service");
 
 statusSelect?.addEventListener("change", function () {
   if (this.value === "follow") {
-    serviceSelect.disabled = false; // متابعة = يفتح الخدمة
+    serviceSelect.disabled = false; 
   } else {
-    serviceSelect.disabled = true;  // كشف جديد = يقفل الخدمة
-    serviceSelect.value = "";       // يرجعها فاضية
+    serviceSelect.disabled = true; 
+    serviceSelect.value = "";      
   }
 });
 
-const WHATSAPP_NUMBER = '01099529496'; // <-- ضع رقم واتساب العيادة بدون +
+const WHATSAPP_NUMBER = '201099529496';
 
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
