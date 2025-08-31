@@ -1,8 +1,6 @@
-// Simple interactions
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Mobile menu toggle
 const burger = document.getElementById('burger');
 burger?.addEventListener('click', () => {
   const nav = document.querySelector('.topbar nav');
@@ -24,7 +22,6 @@ burger?.addEventListener('click', () => {
   }
 });
 
-// Booking form -> show confirm dialog + WhatsApp link
 const form = document.getElementById('bookingForm');
 const dialog = document.getElementById('confirmDialog');
 const summary = document.getElementById('summary');
@@ -72,4 +69,24 @@ form?.addEventListener('submit', (e) => {
   const encoded = encodeURIComponent(msg);
   waLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
   dialog?.showModal();
+});
+document.querySelectorAll('.topbar nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('.topbar nav');
+    if (nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      nav.removeAttribute('style'); 
+    }
+  });
+});
+document.addEventListener('click', (e) => {
+  const nav = document.querySelector('.topbar nav');
+  const burger = document.querySelector('.burger');
+
+  if (nav.classList.contains('open')) {
+    if (!nav.contains(e.target) && !burger.contains(e.target)) {
+      nav.classList.remove('open');
+      nav.removeAttribute('style');
+    }
+  }
 });
