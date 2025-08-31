@@ -77,14 +77,14 @@ document.querySelectorAll('.topbar nav a').forEach(link => {
     }
   });
 });
-document.addEventListener("click", function (e) {
-  const nav = document.querySelector(".topbar nav");
-  const burger = document.getElementById("burger");
-  if (nav.classList.contains("open") && !nav.contains(e.target) && e.target !== burger) {
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector('.topbar nav');
+  if (nav.classList.contains("open")) {
     nav.classList.remove("open");
     nav.removeAttribute("style");
   }
 });
+
 
 const phoneInput = document.getElementById("phone");
 
