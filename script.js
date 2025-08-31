@@ -77,13 +77,24 @@ document.querySelectorAll('.topbar nav a').forEach(link => {
     }
   });
 });
-window.addEventListener("scroll", function () {
-  const nav = document.querySelector('.topbar nav');
+const nav = document.querySelector('.topbar nav');
+
+window.addEventListener("scroll", () => {
   if (nav.classList.contains("open")) {
     nav.classList.remove("open");
     nav.removeAttribute("style");
   }
 });
+
+window.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && e.target.id !== 'burger') {
+    if (nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      nav.removeAttribute("style");
+    }
+  }
+});
+
 
 
 const phoneInput = document.getElementById("phone");
