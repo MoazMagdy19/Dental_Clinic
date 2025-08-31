@@ -9,17 +9,17 @@ body {
   background: #f8fafc;
 }
 :root {
-  --brand: #4f46e5;        /* بنفسجي هادي أساسي */
-  --brand-dark: #4338ca;   /* أغمق شوية للهوفر */
-  --ink: #1e293b;          /* أزرق رمادي غامق للنصوص */
-  --muted: #64748b;        /* رمادي أزرق للنصوص الثانوية */
-  --card: #ffffff;         /* الخلفية البيضاء للكروت */
-  --ring: rgba(79,70,229,.25); /* بنفسجي شفاف عند الفوكس */
+  --brand: #4f46e5;        
+  --brand-dark: #4338ca;  
+  --ink: #1e293b;          
+  --muted: #64748b;        
+  --card: #ffffff;         
+  --ring: rgba(79,70,229,.25); 
   --shadow: 0 10px 30px rgba(15,23,42,.08);
   --radius: 14px;
   
-  --bg-soft: #f8fafc;      /* خلفية عامة فاتحة جدًا */
-  --bg-accent: #eef2ff;    /* خلفية فاتحة للهايلايت */
+  --bg-soft: #f8fafc;      
+  --bg-accent: #eef2ff;   
 }
 
 .container { width: min(1100px, 92%); margin-inline: auto; }
