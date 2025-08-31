@@ -77,13 +77,15 @@ document.querySelectorAll('.topbar nav a').forEach(link => {
     }
   });
 });
-window.addEventListener("scroll", function () {
-  const nav = document.querySelector('.topbar nav'); 
-  if (nav.classList.contains("open")) {
+document.addEventListener("click", function (e) {
+  const nav = document.querySelector(".topbar nav");
+  const burger = document.getElementById("burger");
+  if (nav.classList.contains("open") && !nav.contains(e.target) && e.target !== burger) {
     nav.classList.remove("open");
     nav.removeAttribute("style");
   }
 });
+
 const phoneInput = document.getElementById("phone");
 
 phoneInput.addEventListener("input", function () {
