@@ -65,7 +65,6 @@ form?.addEventListener('submit', (e) => {
 الحالة: ${data.status === "new" ? "كشف جديد" : "متابعة"}
 الخدمة: ${data.status === "new" ? "-" : data.service}
 التاريخ: ${data.date}
-الساعة: ${data.time}
 ملاحظات: ${data.notes || '-'} `;
 
   summary.textContent = msg;
