@@ -45,7 +45,7 @@ form?.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
 
-  if (!data.name || !data.phone || !data.status || !data.date || !data.time) {
+  if (!data.name || !data.phone || !data.status || !data.date) {
     alert('من فضلك أكمل كل الحقول المطلوبة.');
     return;
   }
@@ -61,7 +61,6 @@ form?.addEventListener('submit', (e) => {
 الحالة: ${data.status === "new" ? "كشف جديد" : "متابعة"}
 الخدمة: ${data.status === "new" ? "-" : data.service}
 التاريخ: ${data.date}
-الساعة: ${data.time}
 ملاحظات: ${data.notes || '-'} `;
 
   summary.textContent = msg;
