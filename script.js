@@ -45,7 +45,6 @@ form?.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
 
-  // Basic validation
   if (!data.name || !data.phone || !data.status || !data.date || !data.time) {
     alert('من فضلك أكمل كل الحقول المطلوبة.');
     return;
@@ -79,14 +78,10 @@ document.querySelectorAll('.topbar nav a').forEach(link => {
     }
   });
 });
-document.addEventListener('click', (e) => {
-  const nav = document.querySelector('.topbar nav');
-  const burger = document.querySelector('.burger');
-
-  if (nav.classList.contains('open')) {
-    if (!nav.contains(e.target) && !burger.contains(e.target)) {
-      nav.classList.remove('open');
-      nav.removeAttribute('style');
-    }
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector('.topbar nav'); 
+  if (nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    nav.removeAttribute("style");
   }
 });
