@@ -61,6 +61,7 @@ form?.addEventListener('submit', (e) => {
   const msg = `حجز جديد:
 الاسم: ${data.name}
 الهاتف: ${data.phone}
+المكان: ${data.area}
 الحالة: ${data.status === "new" ? "كشف جديد" : "متابعة"}
 الخدمة: ${data.status === "new" ? "-" : data.service}
 التاريخ: ${data.date}
