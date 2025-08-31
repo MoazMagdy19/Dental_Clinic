@@ -118,9 +118,19 @@
           <input id="name" name="name" type="text" required placeholder="اكتب اسمك" />
         </div>
         <div class="row">
-          <label for="phone">رقم الهاتف</label>
-          <input id="phone" name="phone" type="tel" required placeholder="مثال: 01xxxxxxxxx" />
-        </div>
+  <label for="phone">رقم الهاتف</label>
+  <input 
+    id="phone" 
+    name="phone" 
+    type="tel" 
+    required 
+    placeholder="مثال: 01xxxxxxxxx" 
+    pattern="01[0-9]{9}" 
+    maxlength="11" 
+    inputmode="numeric"
+  />
+</div>
+
         <div class="row">
   <label for="area">اختر القرية </label>
   <select id="area" name="area" required>
